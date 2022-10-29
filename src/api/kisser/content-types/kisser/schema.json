@@ -18,22 +18,20 @@
     },
     "lastname": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "mail": {
       "type": "email",
-      "required": true
+      "required": false
     },
     "nickname": {
       "type": "string"
     },
-    "password": {
-      "type": "password"
+    "phone": {
+      "type": "string"
     },
-    "location": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::location.location"
+    "localisation": {
+      "type": "string"
     }
   }
 }

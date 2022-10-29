@@ -4,7 +4,8 @@
   "info": {
     "singularName": "location",
     "pluralName": "locations",
-    "displayName": "location"
+    "displayName": "location",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,14 +14,20 @@
   "attributes": {
     "lat": {
       "type": "float",
-      "required": true
+      "required": false
     },
     "lng": {
       "type": "float",
-      "required": true
+      "required": false
     },
     "label": {
       "type": "string"
+    },
+    "franckisses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::franckiss.franckiss",
+      "mappedBy": "location"
     }
   }
 }

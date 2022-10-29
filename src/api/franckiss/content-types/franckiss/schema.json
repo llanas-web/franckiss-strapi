@@ -19,24 +19,9 @@
       "required": true,
       "regex": "^[A-Z]{4}$"
     },
-    "isMounted": {
+    "isChassis": {
       "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "isSelled": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "isPayed": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "isValidated": {
-      "type": "boolean",
-      "default": false,
+      "default": true,
       "required": true
     },
     "price": {
@@ -53,10 +38,25 @@
       "relation": "oneToOne",
       "target": "api::kisser.kisser"
     },
+    "isOffert": {
+      "type": "boolean"
+    },
     "location": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::location.location"
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "franckisses"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Commande",
+        "Expedie",
+        "Recu",
+        "Valide"
+      ],
+      "default": "Commande",
+      "required": true
     }
   }
 }
