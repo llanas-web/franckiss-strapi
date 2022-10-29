@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "singularName": "color",
+    "pluralName": "colors",
+    "displayName": "color"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ref": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "rgb": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "franckisses",
+  "info": {
+    "singularName": "franckiss",
+    "pluralName": "franckisses",
+    "displayName": "franckiss",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "maxLength": 4,
+      "unique": true,
+      "required": true,
+      "regex": "^[A-Z]{4}$"
+    },
+    "isMounted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isSelled": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isPayed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isValidated": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "color": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::color.color"
+    },
+    "kisser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kisser.kisser"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    }
+  }
+}
